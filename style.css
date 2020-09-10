@@ -13,6 +13,10 @@ body {
 	background: #eeedec;
 }
 
+.myeyes {
+	animation: eyeattack 0.3s 0s alternate-reverse infinite;
+}
+
 article {
 	padding-top: 10em;
 	padding-bottom: 2em;
@@ -97,6 +101,13 @@ h2 {
   	22%, 25%, 46%, 96% {transform: translate(-0.005em, -0.004em);}
     	14%,36%,53%, 79% {transform: translate(0.002em, -0.001em);}
    	26%,41%, 77% {transform: translate(-0.003em, 0.001em);}
+}
+
+@keyframes eyeattack {
+	10% {background: #ff0000;}
+	30% {background: #b8f366;}
+	60% {background: #00ffe7;}
+	90% {background: #0070ff;}
 }
 
 del {
