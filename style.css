@@ -32,7 +32,7 @@ article {
 	line-height: 13vw;
 	display: block;
 	position:relative;
-	animation: glitch 5s 5s infinite;
+	animation: glitch 12s 5s infinite;
 	mix-blend-mode: multiply;
 }
 
@@ -65,25 +65,29 @@ h2 {
 }
 
 @keyframes glitch {
-  	1% {transform: rotateX(10deg) skewX(90deg);}
-  	5% {transform: rotateX(0deg) skewX(0deg);}
+  	1.2% {transform: rotateX(10deg) skewX(90deg);}
+  	1%, 1.5% {transform: rotateX(0deg) skewX(0deg);}
   	75% {transform: translate(0, 0);}
   	76% {transform: translate(1%, -0.3%);}
+	77% {transform: rotate(-0.3deg);}
+	77.4% {transform: rotate(0deg);}
   	100% {transform: translate(1%, -0.3%);}
 }
 
 @keyframes colourglitch1 {
-  	1%, 5%, 42%, 74% {transform: translate(0.005em, 0.004em);}
-  	15%, 26%, 51%, 75% {transform: translate(-0.004em, -0.006em);}
-  	7%,24%,46%, 89% {transform: translate(0.002em, -0.007em);}
-   	26%,64%, 100% {transform: translate(-0.006em, 0.004em);}
+	3%, 7%, 17%, 20%, 33%, 48%, 58%, 70%, 93% {transform: translate(0, 0);}
+  	1%, 5%, 42%, 74% {transform: translate(0.002em, 0.004em);}
+  	15%, 26%, 51%, 75% {transform: translate(-0.004em, -0.002em);}
+  	7%,24%,46%, 89% {transform: translate(0.002em, -0.003em);}
+   	26%,64%, 100% {transform: translate(-0.002em, 0.004em);}
 }
 
 @keyframes colourglitch2 {
+	2%, 9%, 12%, 20%, 38%, 44%, 59%, 74%, 91% {transform: translate(0, 0);}
   	6%, 33%, 67%, 83% {transform: translate(0.004em, 0.005em);}
   	22%, 25%, 46%, 96% {transform: translate(-0.005em, -0.004em);}
-    	14%,36%,53%, 79% {transform: translate(0.006em, -0.005em);}
-   	26%,41%, 77% {transform: translate(-0.003em, 0.005em);}
+    	14%,36%,53%, 79% {transform: translate(0.002em, -0.001em);}
+   	26%,41%, 77% {transform: translate(-0.003em, 0.001em);}
 }
 
 del {
