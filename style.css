@@ -1,5 +1,3 @@
-
-
 * { 
 	margin: 0;
 	padding: 0;
@@ -18,23 +16,42 @@ body {
 article {
 	padding-top: 10em;
 	padding-bottom: 2em;
-vertical-align:center;
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -65%);
+	vertical-align:center;
+ 	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -65%);
 }
 
 .glitch { 
 	font-family: 'Alegreya';
 	font-weight: 900;
-	color: #323130;
+	color: #b2f330;
 	mix-blend-mode: screen;
 	font-size: 21vw;
 	line-height: 13vw;
 	display: block;
+	position:relative;
 	animation: glitch 5s 5s infinite;
+	mix-blend-mode: multiply;
+}
 
+.glitch::after {
+	content: attr(glitch-text);
+  	position: absolute;
+  	left: 2px;
+  	color: #c04060;
+  	mix-blend-mode: multiply;
+  	animation: colourglitch1 4.5s 0s infinite, colourglitch2 3.4s 0s alternate-reverse infinite;
+}
+  
+.glitch::before {
+  	content: attr(glitch-text);
+  	position: absolute;
+  	left: 2px;
+  	color: #5070f0;
+  	mix-blend-mode: multiply;
+  	animation: colourglitch1 4s 0s alternate-reverse infinite, colourglitch2 5.4s 0s infinite;
 }
 
 h2 { 
@@ -48,25 +65,26 @@ h2 {
 }
 
 @keyframes glitch {
-  1%{
-    transform: rotateX(10deg) skewX(90deg);
-  }
-  5%{
-    transform: rotateX(0deg) skewX(0deg);
-  }
-  75%{
-    transform: translate(0, 0);
-  }
-    76%{
-    transform: translate(1%, -0.3%);
-
-}
-    100%{
-    transform: translate(1%, -0.3%);
-
+  	1% {transform: rotateX(10deg) skewX(90deg);}
+  	5% {transform: rotateX(0deg) skewX(0deg);}
+  	75% {transform: translate(0, 0);}
+  	76% {transform: translate(1%, -0.3%);}
+  	100% {transform: translate(1%, -0.3%);}
 }
 
+@keyframes colourglitch1 {
+  	1%, 5%, 42%, 74% {transform: translate(0.005em, 0.004em);}
+  	15%, 26%, 51%, 75% {transform: translate(-0.004em, -0.006em);}
+  	7%,24%,46%, 89% {transform: translate(0.002em, -0.007em);}
+   	26%,64%, 100% {transform: translate(-0.006em, 0.004em);}
+}
 
+@keyframes colourglitch2 {
+  	6%, 33%, 67%, 83% {transform: translate(0.004em, 0.005em);}
+  	22%, 25%, 46%, 96% {transform: translate(-0.005em, -0.004em);}
+    	14%,36%,53%, 79% {transform: translate(0.006em, -0.005em);}
+   	26%,41%, 77% {transform: translate(-0.003em, 0.005em);}
+}
 
 del {
 	color: #000;
