@@ -1,0 +1,73 @@
+
+
+* { 
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+
+body {
+	padding: 0em;
+	width:100%;
+	font-family: 'Roboto';
+	font-weight: 400;
+	background: #eeedec;
+}
+
+article {
+	padding-top: 10em;
+	padding-bottom: 2em;
+vertical-align:center;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+}
+
+.glitch { 
+	font-family: 'Alegreya';
+	font-weight: 900;
+	color: #323130;
+	mix-blend-mode: screen;
+	font-size: 21vw;
+	line-height: 13vw;
+	display: block;
+	animation: glitch 5s 5s infinite;
+
+}
+
+h2 { 
+	font-size: 2vw;
+	display: block;
+	position: relative;
+	font-weight: 400;
+	color: #d43;
+	padding: .3em;
+	text-transform: uppercase;
+}
+
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  5%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+  75%{
+    transform: translate(0, 0);
+  }
+    76%{
+    transform: translate(1%, -0.3%);
+
+}
+    100%{
+    transform: translate(1%, -0.3%);
+
+}
+
+
+
+del {
+	color: #000;
+}
