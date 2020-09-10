@@ -8,7 +8,7 @@
 body {
 	padding: 0em;
 	width:100%;
-	font-family: 'Roboto';
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	background: #eeedec;
 }
@@ -20,11 +20,11 @@ article {
  	position: absolute;
     	top: 50%;
     	left: 50%;
-    	transform: translate(-50%, -65%);
+    	transform: translate(-50%, -60%);
 }
 
 .glitch { 
-	font-family: 'Alegreya';
+	font-family: 'Alegreya', serif;
 	font-weight: 900;
 	color: #b2f330;
 	mix-blend-mode: screen;
@@ -32,6 +32,7 @@ article {
 	line-height: 13vw;
 	display: block;
 	position:relative;
+	padding-bottom:2vw;
 	animation: glitch 12s 5s infinite;
 	mix-blend-mode: multiply;
 }
@@ -62,6 +63,14 @@ h2 {
 	color: #d43;
 	padding: .3em;
 	text-transform: uppercase;
+}
+
+.notefromauthor {
+	font-size: 1.4vw;
+	font-family: 'Reenie Beanie', cursive;
+	color: #ccc9c0;
+	text-align: right;
+	transform: rotate(-2deg);
 }
 
 @keyframes glitch {
