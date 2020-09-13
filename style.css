@@ -6,25 +6,104 @@
 
 
 body {
-	padding: 0em;
+	padding: 0;
+	margin: 0;
 	width:100%;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;;
 	font-weight: 400;
 	background: #eeedec;
+	overflow:hidden;
 }
 
-.myeyes {
-	animation: eyeattack 0.3s 0s alternate-reverse infinite;
+#screen {
+    height: 100%;
+    width: 100%;
+	position: absolute;
+/*	border: 4px solid blue; */
+
 }
 
-article {
+h2 { 
+	font-size: 2vw;
+	display: block;
+	position: relative;
+	font-weight: 400;
+	color: #d43;
+	padding: .3em;
+	text-transform: uppercase;
+	mix-blend-mode: color-burn;
+}
+
+span, p {
+	font-size: 1.4vw;
+	font-family: 'Reenie Beanie', cursive;
+}
+
+.notefromauthor {
+	white-space: nowrap;
+	color: #ccc9c0;
+}
+
+#eyecancer {
 	padding-top: 10em;
 	padding-bottom: 2em;
 	vertical-align:center;
  	position: absolute;
-    	top: 50%;
-    	left: 50%;
-    	transform: translate(-50%, -60%);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+/* 	border: 4px solid blue;  */
+}
+
+#eyecancer_message:hover {
+	text-decoration: line-through;
+}
+
+#eyecancer_warning {
+	visibility: hidden;
+	animation: wiggle 1s cubic-bezier(.80,.03,.90,.97) alternate-reverse infinite;
+}
+
+#eyecancer_message:hover ~ #eyecancer_warning {
+	visibility: visible;
+	color: #d43;
+}
+
+
+
+#puny {
+	padding-top: 10em;
+	padding-bottom: 2em;
+	vertical-align:center;
+ 	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+/*	border: 4px solid green;  */
+}
+
+#dollars {
+	width: 100vw;
+	vertical-align:center;
+ 	position: absolute;
+    top: 50%;
+    left: 100vw;
+/*	border: 2px solid #c0c; */
+}
+
+#cashteaser {
+	position: absolute;
+	transform: translate(-105%, -50%);
+/*	border: 2px solid #07f;*/
+}
+
+#cashflow {
+	color: #383433;
+  	vertical-align:center;
+	position: absolute;
+	left: 50%;
+    transform: translate(-50%, -50%);
+/*  border: 2px solid red;*/
 }
 
 .glitch { 
@@ -59,24 +138,6 @@ article {
   	animation: colourglitch1 4s 0s alternate-reverse infinite, colourglitch2 5.4s 0s infinite;
 }
 
-h2 { 
-	font-size: 2vw;
-	display: block;
-	position: relative;
-	font-weight: 400;
-	color: #d43;
-	padding: .3em;
-	text-transform: uppercase;
-}
-
-.notefromauthor {
-	font-size: 1.4vw;
-	font-family: 'Reenie Beanie', cursive;
-	color: #ccc9c0;
-	text-align: right;
-	transform: rotate(-2deg);
-}
-
 @keyframes glitch {
   	1.2% {transform: rotateX(10deg) skewX(90deg);}
   	1%, 1.5% {transform: rotateX(0deg) skewX(0deg);}
@@ -85,6 +146,13 @@ h2 {
 	77% {transform: rotate(-0.3deg);}
 	77.4% {transform: rotate(0deg);}
   	100% {transform: translate(1%, -0.3%);}
+}
+
+@keyframes wiggle {
+	10%, 90% {transform: translate(-.01em, 0); rotate(0deg);}
+    20%, 80% {transform: translate(.02em, 0) rotate(.1deg);}
+	30%, 50%, 70% {transform: translate(-.04em, 0) rotate(.3deg);}
+	40%, 60% {transform: translate(.04em, 0) rotate(-.1deg);}
 }
 
 @keyframes colourglitch1 {
@@ -99,8 +167,18 @@ h2 {
 	2%, 9%, 12%, 20%, 38%, 44%, 59%, 74%, 91% {transform: translate(0, 0);}
   	6%, 33%, 67%, 83% {transform: translate(0.004em, 0.005em);}
   	22%, 25%, 46%, 96% {transform: translate(-0.005em, -0.004em);}
-    	14%,36%,53%, 79% {transform: translate(0.002em, -0.001em);}
+    14%,36%,53%, 79% {transform: translate(0.002em, -0.001em);}
    	26%,41%, 77% {transform: translate(-0.003em, 0.001em);}
+}
+
+#eyecancer {
+	text-align: right;
+	transform: rotate(-2deg);
+}
+
+.myeyes {
+	animation: eyeattack 0.3s 0s alternate-reverse infinite;
+
 }
 
 @keyframes eyeattack {
@@ -113,3 +191,13 @@ h2 {
 del {
 	color: #000;
 }
+
+.screenposition-dollars {
+	animation: getdollars 10s cubic-bezier(.15,1,0,1) alternate;
+}
+
+@keyframes getdollars {
+	20%, 80% {transform: translate(-100%, 0);}
+	100% {transform: translate(0, 0);}
+}
+	
