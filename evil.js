@@ -29,6 +29,6 @@ document.body.classList.toggle("myeyes");
 }
 
 function getdollars( ) {
-    var element = document.getElementById("screen");
+    var element = document.getElementById("canvas");
   element.classList.toggle("screenposition-dollars");
 }
