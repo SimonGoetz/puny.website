@@ -5,14 +5,18 @@ var quotes = [
 					"Ana is rather",
 					"Jo's website will be at least as",
 					"Yoda looked very",
-					"Your mom is pretty",
+					"Andreas' mom is extremely",
 					"I wanted a pony but got a website that is",
 					"Your reload button is also",
 					"Sushi tends to be",
 					"Unicorns are not at all",
 					"Websites with Javascript can still be",
-					"hello world, i am",
-					"if you read this, you are"
+					"\"hello world\" is technically",
+					"If you read this, you are",
+					"Compared to Hume, Kant is empirically",
+					"Your believes are rather",
+					"A squared circle is geometrically",
+					"User research for this page is totally"
 			];
 			var quote = quotes[Math.floor(Math.random() * quotes.length)];
 			document.getElementById("caption").innerHTML = quote;
@@ -22,4 +26,9 @@ var quotes = [
 
 function eyecancer( ) {
 document.body.classList.toggle("myeyes");
+}
+
+function getdollars( ) {
+    var element = document.getElementById("screen");
+  element.classList.toggle("screenposition-dollars");
 }
